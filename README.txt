@@ -34,7 +34,7 @@ Steps to follow to be able to run the REN on the FPA dataset:
 9- After training, test and evaluate the network as described below.
 10- Produce prediction samples using the corresponding segments in the pre/post-processing scripts. You should also be validating the data/scripts along the way using the validation segments in the preprocessing scripts.
 
-**Note: caffe includes a useful script that will split the training log into two files containing training/test loss; in my case the script was run using "python /home/isg/tmp/caffe/tools/extra/parse_log.py training_log_name output_direcotry". This allows you to easily view the loss accross the training period and can be easily used to draw loss graphs using the plot_logs.py script.
+**Note: caffe includes a useful script that will split the training log into two files containing training/test loss; in my case the script was run using "python /home/isg/tmp/caffe/tools/extra/parse_log.py training_log_name output_direcotry". This allows you to easily view the loss accross the training period and can be easily used to draw loss graphs using the plot_logs.py script I've created.
 
 
 

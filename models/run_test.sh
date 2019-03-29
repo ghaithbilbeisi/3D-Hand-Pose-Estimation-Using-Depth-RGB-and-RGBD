@@ -13,7 +13,7 @@ cd ../logs
 head -n $n $4 | tee $clean_out
 sed '/labels =/!d' ./$clean_out > $(echo ${clean_out/_.txt/_label.txt})
 sed '/predict =/!d' ./$clean_out > $(echo ${clean_out/_.txt/_predict.txt})
-cd ../evaluation\ pretty ### change to ../evaluation after everything is done
-python3 compute_error.py $dataset max-frame $clean_out
-python3 compute_error.py $dataset mean-frame $clean_out
-python3 compute_error.py $dataset joint $clean_out
+cd ../evaluation
+python3 compute_error.py REN_9x6x6 max-frame $dataset $clean_out
+python3 compute_error.py REN_9x6x6 mean-frame $dataset $clean_out
+python3 compute_error.py REN_9x6x6 joint $dataset $clean_out

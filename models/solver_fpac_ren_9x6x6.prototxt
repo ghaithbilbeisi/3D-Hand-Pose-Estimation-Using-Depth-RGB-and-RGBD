@@ -1,0 +1,14 @@
+net: "/home/bilbeisi/REN/models/deploy_fpac_ren_9x6x6.prototxt"
+test_iter: 372
+test_interval: 1000
+base_lr: 1e-2
+lr_policy: "step"
+gamma: 0.1
+stepsize: 20000 # 1 epoch = 317 iters
+display: 100
+max_iter: 60000 #76080
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 10000
+snapshot_prefix: "/home/bilbeisi/REN/models/fpac_ren_9x6x6"
+solver_mode: GPU

@@ -44,10 +44,6 @@ def main():
         if idx % 500 == 0:
             print('{}/{}'.format(idx + 1, len(names)))
 
-
-        centers.append(center.reshape((1, 3)))
-        if idx % 500 == 0:
-            print('{}/{}'.format(idx + 1, len(names)))
     util.save_results(centers, out_file)
 
 if __name__ == '__main__':

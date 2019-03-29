@@ -1,6 +1,8 @@
+**All code and data used for the project should still be on pc 2106 under \home\bilbeisi\REN, this readme is for someone trying to recreate the steps followed in this project.
+
 Directories:
 
-- Base directory is ~/REN/ (PC 2106 that's /home/bilbeisi/REN/)
+- Base directory is ~/REN/ (PC 2106 that's /home/bilbeisi/REN/). Make sure to search the evaluation folder for and replace my root/base_directory with yours.
 
 - The Data directory should containt the original unprocessed FPA images. Go to https://imperialcollegelondon.box.com/v/first-person-action-benchmark to download and unzip the data from the Video_files directory for all six subjects into this directory (email g.garcia-hernando@imperial.ac.uk for password to access data).
 
@@ -66,5 +68,4 @@ For evaluation edit the eval.sh script in the evaluation folder and add the logf
     	fpad   fpad_test_b159_lr_1e-2_xyz_60k_10k_.txt\
     	fpac         fpac_test_b53_lr_1e-2_xyz_20k_.txt\
     	rgbd    rgbd_test_b159_lr_1e-2_xyz_1_200k_2_20k_.txt\
-
 

@@ -1,5 +1,3 @@
-**All code and data used for the project should still be on pc 2106 under \home\bilbeisi\REN, this readme is for someone trying to recreate the steps followed in this project.
-
 Directories:
 
 - Base directory is ~/REN/ (PC 2106 that's /home/bilbeisi/REN/). Make sure to search the evaluation folder for and replace my root/base_directory with yours.
@@ -25,18 +23,28 @@ After creating the centers and normalizing the labels, make sure to either remov
 
 
 Steps to follow to be able to run the REN on the FPA dataset:
+
 1- Image data must be downloaded and unzipped into the data folder as mentioned above.
+
 2- Calculate image centers using the get_centers.py script.
+
 3- Normalize/localize the labels using the corresponding segment in the preprocessing_depth/rgb.py files.
+
 4- Move or rename the _label.txt files and then rename the _label_nm.txt files to _label.txt.
+
 5- Crop the images using the corresponding segment in the preprocessing files. Before doing so, create the required file structure in the cropped directory as explained above.
+
 6- Create the hdf5 files using the create_hdf5.py or create_rgbd_hdf5.py scripts.
+
 7- Go over the model architectures and solver definitions in the models directory and make sure the names and directories match. Also make sure to edit the model (deploy_.prototxt) and comment out the "include phase: TRAIN" lines in the loss definition at the end to avoid huge logs and get important test loss info.
+
 8- Train the network using Caffe commands as demonstrated below. Make sure to pipe the output into a log file with a unique name.
+
 9- After training, test and evaluate the network as described below.
+
 10- Produce prediction samples using the corresponding segments in the pre/post-processing scripts. You should also be validating the data/scripts along the way using the validation segments in the preprocessing scripts.
 
-**Note: caffe includes a useful script that will split the training log into two files containing training/test loss; in my case the script was run using "python /home/isg/tmp/caffe/tools/extra/parse_log.py training_log_name output_direcotry". This allows you to easily view the loss accross the training period and can be easily used to draw loss graphs using the plot_logs.py script I've created.
+**Note: caffe includes a useful script that will split the training log into two files containing training/test loss; in my case the script was run using "python /home/isg/tmp/caffe/tools/extra/parse_log.py training_log_name output_direcotry". This allows you to easily view the loss across the training period and can be easily used to draw loss graphs using the plot_logs.py script I've created.
 
 
 
